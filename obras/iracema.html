@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Iracema | LiteraBrasil</title>
-    <meta name="description" content="Iracema: Literatura Brasileira para ENEM e vestibulares">
+    <meta name="description" content="Iracema, de José de Alencar: resumo, personagens, contexto, análise e revisão para ENEM e vestibulares.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/obras.css">
     <script defer src="../js/darkmode.js"></script>
     <script defer src="../js/search.js"></script>
     <script defer src="../js/carousel.js"></script>
@@ -16,7 +17,7 @@
     <script defer src="../js/script.js"></script>
 </head>
 
-<body>
+<body class="obra-page" style="--obra-accent:#245d4b;--obra-accent-2:#d4a34e">
     <header>
         <div class="wrap nav"><a class="logo" href="../index.html"><b>LB</b> LiteraBrasil</a>
             <nav id="menu"><a href="../index.html">Início</a><a href="../index.html#linha">Linha do Tempo</a><a
@@ -33,62 +34,119 @@
         </div>
     </aside>
     <main>
-        <section class="detail">
-            <div class="wrap">
-                <p><a href="../index.html">Início</a> / Obras</p><span class="eye">1865 · Romantismo</span>
-                <h1>Iracema</h1>
-                <p>A união entre Iracema e Martim torna-se mito poético da formação do Ceará.</p>
+        <section class="detail obra-hero" id="topo">
+            <div class="wrap obra-hero-grid">
+                <div>
+                    <p class="obra-breadcrumb"><a href="../index.html">Início</a> / <a href="../index.html#obras">Obras</a> / Iracema</p>
+                    <span class="eye">1865 · Romantismo · José de Alencar</span>
+                    <h1>Iracema</h1>
+                    <p class="obra-lead">Romance indianista que transforma a união entre Iracema e Martim em mito de origem do Ceará. A obra mistura lirismo, idealização da natureza e conflito colonial.</p>
+                    <div class="obra-facts"><span><b>Gênero</b> romance indianista</span><span><b>Espaço</b> litoral cearense</span><span><b>Foco</b> amor, origem e colonização</span></div>
+                    <div class="buttons"><a class="btn" href="#enredo">Resumo</a><a class="btn ghost" href="#enem">ENEM</a></div>
+                </div>
+                <figure class="obra-cover-figure">
+                    <div class="obra-cover-frame"><img src="../img/obras/iracema.jpg" alt="Capa L&amp;PM Pocket de Iracema, de José de Alencar"></div>
+                    <figcaption>Iracema · capa L&amp;PM Pocket usada como referência visual da edição.</figcaption>
+                </figure>
             </div>
         </section>
-        <section class="block wrap profile">
-            <aside>
-                <div class="cover">Iracema</div>
-                <article class="card">
-                    <p><b>Autor:</b> José de Alencar</p>
-                    <p><b>Ano:</b> 1865</p>
-                    <p><b>Movimento:</b> Romantismo</p>
-                </article>
-            </aside>
-            <div class="stack">
-                <article class="card">
-                    <h2>Resumo</h2>
-                    <p>A união entre Iracema e Martim torna-se mito poético da formação do Ceará.</p>
-                </article>
-                <article class="card">
-                    <h2>Personagens</h2>
-                    <div class="tags"><span>Iracema</span><span>Martim</span><span>Poti</span><span>Araquém</span></div>
-                </article>
-                <article class="card">
-                    <h2>Temas</h2>
-                    <div class="mind"><b>Iracema</b><span>nacionalismo</span><span>colonização</span><span>amor
-                            trágico</span><span>natureza</span></div>
-                </article>
-                <article class="card">
-                    <h2>Importância</h2>
-                    <p>A obra é referência de Romantismo por unir elaboração estética e reflexão sobre a sociedade
-                        brasileira.</p>
-                    <h3>Curiosidade</h3>
-                    <p>Sua recepção mudou ao longo do tempo, mostrando como cada geração produz novas leituras.</p>
-                </article>
+
+        <nav class="obra-section-nav" aria-label="Navegação da página">
+            <div class="wrap"><a href="#visao">Visão geral</a><a href="#enredo">Enredo</a><a href="#personagens">Personagens</a><a href="#contexto">Contexto</a><a href="#analise">Análise</a><a href="#enem">ENEM</a></div>
+        </nav>
+
+        <section class="block wrap obra-overview" id="visao">
+            <div class="heading obra-heading">
+                <div><span class="eye">Antes de ler</span><h2>O que torna Iracema importante</h2></div>
+                <p>José de Alencar constrói uma narrativa simbólica sobre a formação nacional, vista pelo olhar romântico do século XIX.</p>
+            </div>
+            <div class="obra-insight-grid">
+                <article class="obra-insight"><span class="obra-number">01</span><h3>Em uma frase</h3><p>Iracema, guardiã de sua tribo, apaixona-se pelo português Martim e rompe laços sagrados e comunitários.</p></article>
+                <article class="obra-insight"><span class="obra-number">02</span><h3>Chave de leitura</h3><p>A protagonista é idealizada como figura poética da terra americana, enquanto Martim representa a presença europeia.</p></article>
+                <article class="obra-insight"><span class="obra-number">03</span><h3>Atenção crítica</h3><p>O romance valoriza a natureza e o indígena, mas também suaviza a violência histórica da colonização.</p></article>
+            </div>
+            <div class="obra-tags"><span>indianismo</span><span>nacionalismo</span><span>natureza</span><span>amor trágico</span><span>colonização</span><span>mito fundador</span></div>
+        </section>
+
+        <section class="block pale" id="enredo">
+            <div class="wrap">
+                <div class="heading obra-heading">
+                    <div><span class="eye">Resumo do enredo</span><h2>Da paixão ao nascimento de Moacir</h2></div>
+                    <p>O enredo é curto, mas carregado de símbolos: a história amorosa funciona como explicação mítica para uma origem brasileira.</p>
+                </div>
+                <div class="obra-story">
+                    <article class="obra-story-step"><div class="obra-marker"><span>1</span></div><div><span class="obra-kicker">Encontro</span><h3>Iracema conhece Martim</h3><p>Iracema, jovem tabajara e guardiã do segredo da jurema, encontra Martim, guerreiro português aliado dos pitiguaras. A aproximação entre os dois já nasce marcada pela diferença cultural e pela tensão entre povos inimigos.</p></div></article>
+                    <article class="obra-story-step"><div class="obra-marker"><span>2</span></div><div><span class="obra-kicker">Ruptura</span><h3>O amor desafia a tribo</h3><p>Ao se unir a Martim, Iracema rompe obrigações religiosas e familiares. Araquém, seu pai, representa a tradição tabajara; Irapuã, guerreiro da tribo, intensifica o conflito por ciúme e hostilidade ao estrangeiro.</p></div></article>
+                    <article class="obra-story-step"><div class="obra-marker"><span>3</span></div><div><span class="obra-kicker">Exílio</span><h3>Iracema acompanha Martim</h3><p>A protagonista abandona sua comunidade e passa a viver ao lado de Martim e Poti. A paisagem cearense acompanha a mudança emocional: natureza, saudade, maternidade e perda aparecem ligados ao destino da personagem.</p></div></article>
+                    <article class="obra-story-step"><div class="obra-marker"><span>4</span></div><div><span class="obra-kicker">Desfecho</span><h3>Nasce Moacir</h3><p>Iracema dá à luz Moacir, filho de mãe indígena e pai europeu. Enfraquecida e solitária, morre após entregar a criança a Martim. O filho simboliza uma origem mestiça, mas nasce associado à dor e ao sacrifício.</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="block wrap" id="personagens">
+            <div class="heading obra-heading">
+                <div><span class="eye">Quem move a obra</span><h2>Personagens principais</h2></div>
+                <p>Mais do que figuras realistas, os personagens funcionam como símbolos românticos de cultura, território e conflito.</p>
+            </div>
+            <div class="obra-character-grid">
+                <article class="obra-character"><span class="obra-avatar">I</span><h3>Iracema</h3><p>Protagonista idealizada, ligada à natureza e ao sagrado. Sua trajetória concentra amor, renúncia e sacrifício.</p></article>
+                <article class="obra-character"><span class="obra-avatar">M</span><h3>Martim</h3><p>Português aliado dos pitiguaras. Representa a chegada europeia e a formação colonial vista pelo imaginário romântico.</p></article>
+                <article class="obra-character"><span class="obra-avatar">P</span><h3>Poti</h3><p>Amigo indígena de Martim, associado à lealdade e à aliança entre portugueses e pitiguaras.</p></article>
+                <article class="obra-character"><span class="obra-avatar">A</span><h3>Araquém</h3><p>Pai de Iracema e pajé tabajara. Guarda a tradição que a protagonista rompe ao escolher Martim.</p></article>
+                <article class="obra-character"><span class="obra-avatar">IR</span><h3>Irapuã</h3><p>Guerreiro tabajara que se opõe ao português e deseja Iracema, acirrando a disputa.</p></article>
+                <article class="obra-character"><span class="obra-avatar">MO</span><h3>Moacir</h3><p>Filho de Iracema e Martim. Seu nascimento simboliza mistura cultural e origem marcada por sofrimento.</p></article>
+            </div>
+        </section>
+
+        <section class="block pale" id="contexto">
+            <div class="wrap">
+                <div class="heading obra-heading">
+                    <div><span class="eye">Contexto histórico e literário</span><h2>Romantismo e projeto nacional</h2></div>
+                    <p>No século XIX, após a Independência, escritores buscavam imagens capazes de diferenciar a literatura brasileira da europeia.</p>
+                </div>
+                <div class="obra-context-grid">
+                    <article class="obra-context-card"><span class="obra-context-icon">1</span><h3>Indianismo</h3><p>O indígena é tratado como herói nacional e símbolo de uma identidade brasileira anterior à colonização portuguesa.</p></article>
+                    <article class="obra-context-card"><span class="obra-context-icon">2</span><h3>Linguagem poética</h3><p>A prosa é marcada por musicalidade, imagens naturais, comparações e tom lendário.</p></article>
+                    <article class="obra-context-card"><span class="obra-context-icon">3</span><h3>Natureza idealizada</h3><p>A paisagem não é cenário neutro: ela expressa beleza, pureza, conflito e sentimento.</p></article>
+                    <article class="obra-context-card"><span class="obra-context-icon">4</span><h3>Limite da visão romântica</h3><p>A obra cria um mito de origem belo, mas não deve ser lida como retrato fiel das relações coloniais.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="block wrap" id="analise">
+            <div class="obra-analysis">
+                <aside class="obra-analysis-callout"><span class="eye">Interpretação</span><h2>A origem nacional aparece como beleza e perda.</h2></aside>
+                <div class="stack">
+                    <article class="card"><h3>Relação com o Romantismo</h3><p>Iracema expressa nacionalismo literário, valorização da natureza, idealização amorosa e figura indígena elevada à condição de mito.</p></article>
+                    <article class="card"><h3>Importância</h3><p>É uma das obras centrais do indianismo brasileiro e ajudou a fixar uma imagem poética do Ceará e da formação nacional.</p></article>
+                    <article class="card"><h3>Curiosidade relevante</h3><p>O nome Moacir costuma ser interpretado como “filho da dor”, leitura coerente com o tom trágico do desfecho.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="block pale" id="enem">
+            <div class="wrap">
+                <div class="heading obra-heading">
+                    <div><span class="eye">ENEM e vestibulares</span><h2>Como a obra pode aparecer em prova</h2></div>
+                    <p>Questões costumam relacionar o romance ao indianismo e à construção simbólica da identidade nacional.</p>
+                </div>
+                <div class="obra-study-grid">
+                    <article class="card obra-study-card"><h3>Checklist essencial</h3><ul class="obra-checklist"><li>Romance indianista do Romantismo brasileiro.</li><li>Iracema é símbolo idealizado da terra americana.</li><li>Martim representa o colonizador português.</li><li>Moacir simboliza a origem mestiça e dolorosa.</li><li>A linguagem é lírica, imagética e marcada pela natureza.</li></ul></article>
+                    <article class="card obra-study-card"><h3>Se aparecer um trecho...</h3><div class="obra-exam-table"><div><b>natureza</b><span>Leia como projeção de sentimentos e identidade nacional.</span></div><div><b>indígena idealizado</b><span>Relacione ao indianismo romântico, não ao realismo histórico.</span></div><div><b>amor trágico</b><span>Observe renúncia, sacrifício e mito de origem.</span></div></div></article>
+                </div>
+                <div class="obra-recap"><div><span class="eye">Para memorizar</span><h2>Guarde isto</h2></div><ol><li>Iracema é indianista e romântica.</li><li>A obra cria um mito fundador do Ceará.</li><li>O amor com Martim simboliza contato entre indígena e europeu.</li><li>Moacir nasce ligado à ideia de dor.</li><li>A beleza poética convive com uma visão idealizada da colonização.</li></ol></div>
             </div>
         </section>
     </main>
     <footer>
         <div class="wrap foot">
-            <div>
-                <h3>LiteraBrasil</h3>
-                <p>Literatura brasileira explicada de forma clara e visual.</p>
-            </div>
-            <div>
-                <h3>Objetivo</h3>
-                <p>Apoiar estudantes do Ensino Médio, ENEM e vestibulares.</p>
-            </div>
-            <div>
-                <h3>Referências</h3>
-                <p><a href="../sobre.html#ref">Bibliografia e contato</a></p>
-            </div>
+            <div><h3>LiteraBrasil</h3><p>Literatura brasileira explicada de forma clara e visual.</p></div>
+            <div><h3>Objetivo</h3><p>Apoiar estudantes do Ensino Médio, ENEM e vestibulares.</p></div>
+            <div><h3>Referências</h3><p><a href="../sobre.html#ref">Bibliografia e contato</a></p></div>
         </div><small>© 2026 LiteraBrasil · Projeto educativo</small>
     </footer>
 </body>
 
 </html>
+
+

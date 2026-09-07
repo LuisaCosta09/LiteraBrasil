@@ -10,6 +10,579 @@
     overflow-x: hidden;
 }
 
+/* =========================================================
+   OBRAS — sistema compartilhado
+   Layout reutilizável para as páginas da seção de obras.
+   ========================================================= */
+.obra-page {
+    --obra-accent: var(--wine);
+    --obra-accent-2: var(--gold);
+    --obra-dark: #221011;
+    overflow-x: hidden;
+}
+
+.obra-page .obra-hero {
+    min-height: 640px;
+    padding: 128px 0 68px;
+    align-items: center;
+    background:
+        linear-gradient(115deg, #17080df2 0%, color-mix(in srgb, var(--obra-accent) 62%, #260f13) 58%, #4e2b1666 100%),
+        url('../img/banner.jpg') center/cover;
+}
+
+.obra-page .obra-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: clamp(34px, 6vw, 78px);
+    align-items: center;
+}
+
+.obra-page .obra-breadcrumb {
+    margin: 0 0 18px;
+    color: #ead8c7;
+    font-size: .8rem;
+}
+
+.obra-page .obra-hero h1 {
+    max-width: 800px;
+    margin: 12px 0 18px;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.obra-page .obra-lead {
+    max-width: 730px;
+    margin: 0;
+    color: #f0dfce;
+    font-size: clamp(1rem, 1.45vw, 1.16rem);
+    line-height: 1.85;
+}
+
+.obra-page .obra-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.obra-page .obra-facts span {
+    display: inline-flex;
+    gap: 7px;
+    padding: 9px 13px;
+    border: 1px solid #ffffff28;
+    border-radius: 999px;
+    background: #fff8ec12;
+    color: #eadbcf;
+    font-size: .76rem;
+}
+
+.obra-page .obra-facts b {
+    color: #f3cc82;
+}
+
+.obra-cover-figure {
+    margin: 0;
+}
+
+.obra-cover-frame {
+    position: relative;
+    width: min(100%, 285px);
+    margin: 0 auto;
+    padding: 12px 12px 24px;
+    border: 1px solid #fff3cf55;
+    border-radius: 5px 16px 16px 5px;
+    background: #d8c7a4;
+    box-shadow: 18px 26px 54px #0007, inset -12px 0 24px #4a2c1838;
+}
+
+.obra-cover-frame img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 2px 10px 10px 2px;
+}
+
+.obra-cover-figure figcaption {
+    max-width: 285px;
+    margin: 13px auto 0;
+    color: #d6c7b7;
+    font-size: .68rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.obra-section-nav {
+    position: sticky;
+    top: 76px;
+    z-index: 12;
+    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(16px);
+}
+
+.obra-section-nav .wrap {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+
+.obra-section-nav a {
+    flex: 0 0 auto;
+    padding: 8px 13px;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.obra-section-nav a:hover {
+    background: var(--pale);
+    color: var(--wine);
+}
+
+.obra-page .obra-heading h2 {
+    max-width: 780px;
+}
+
+.obra-overview {
+    padding-top: 86px;
+}
+
+.obra-insight-grid,
+.obra-character-grid,
+.obra-study-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.obra-insight,
+.obra-character,
+.obra-study-card,
+.obra-context-card {
+    position: relative;
+    min-height: 210px;
+    padding: 26px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--paper);
+    box-shadow: var(--shadow);
+}
+
+.obra-insight::after {
+    content: '';
+    position: absolute;
+    right: -54px;
+    bottom: -70px;
+    width: 140px;
+    height: 140px;
+    border: 1px solid color-mix(in srgb, var(--obra-accent-2) 42%, transparent);
+    border-radius: 50%;
+}
+
+.obra-number,
+.obra-kicker,
+.obra-label {
+    display: inline-flex;
+    color: var(--wine);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.obra-insight h3,
+.obra-character h3,
+.obra-study-card h3,
+.obra-context-card h3 {
+    margin: 10px 0;
+    font-size: 1.55rem;
+}
+
+.obra-insight p,
+.obra-character p,
+.obra-study-card li,
+.obra-context-card p,
+.obra-analysis p,
+.obra-story p {
+    color: var(--muted);
+}
+
+.obra-story {
+    position: relative;
+    max-width: 960px;
+    margin: 12px auto 0;
+}
+
+.obra-story::before {
+    content: '';
+    position: absolute;
+    top: 21px;
+    bottom: 21px;
+    left: 24px;
+    width: 2px;
+    background: linear-gradient(var(--obra-accent-2), color-mix(in srgb, var(--obra-accent) 50%, transparent));
+}
+
+.obra-story-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 24px;
+    padding: 4px 0 42px;
+}
+
+.obra-story-step:last-child {
+    padding-bottom: 0;
+}
+
+.obra-marker {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: start center;
+}
+
+.obra-marker span {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #d2a65faa;
+    border-radius: 50%;
+    color: #fff8eb;
+    background: var(--wine);
+    box-shadow: 0 9px 25px #48122335;
+    font: 700 1.2rem 'Cormorant Garamond';
+}
+
+.obra-story-step h3 {
+    margin: 4px 0 10px;
+    font-size: clamp(1.65rem, 2.7vw, 2.2rem);
+}
+
+.obra-story-step p {
+    max-width: 830px;
+    margin: 8px 0 0;
+    line-height: 1.82;
+}
+
+.obra-character {
+    min-height: 0;
+    transition: .25s;
+}
+
+.obra-character:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--gold) 70%, var(--line));
+}
+
+.obra-avatar {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    border-radius: 50% 50% 50% 9px;
+    color: #fff4e4;
+    background: linear-gradient(145deg, var(--wine), #341218);
+    font: 700 1rem 'Cormorant Garamond';
+}
+
+.obra-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.obra-tags span {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--pale);
+    color: var(--wine);
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+.obra-context-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.obra-context-card {
+    min-height: 205px;
+    padding-left: 76px;
+}
+
+.obra-context-icon {
+    position: absolute;
+    top: 28px;
+    left: 26px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--wine);
+    background: var(--pale);
+    font-weight: 800;
+}
+
+.obra-analysis {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.obra-analysis-callout {
+    padding: 30px;
+    border-radius: 18px;
+    color: #fff4e3;
+    background: linear-gradient(130deg, var(--wine), #2b1018);
+    box-shadow: var(--shadow);
+}
+
+.obra-analysis-callout .eye {
+    color: #ecc77c;
+}
+
+.obra-analysis-callout h2 {
+    margin: 10px 0 0;
+    color: white;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+}
+
+.obra-analysis .stack .card h3 {
+    margin-top: 0;
+}
+
+.obra-study-grid {
+    grid-template-columns: .95fr 1.05fr;
+}
+
+.obra-checklist {
+    padding-left: 20px;
+}
+
+.obra-checklist li {
+    margin: 10px 0;
+}
+
+.obra-exam-table {
+    display: grid;
+    margin-top: 15px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+}
+
+.obra-exam-table div {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 18px;
+    padding: 15px;
+    border-bottom: 1px solid var(--line);
+}
+
+.obra-exam-table div:last-child {
+    border-bottom: 0;
+}
+
+.obra-exam-table b {
+    color: var(--wine);
+}
+
+.obra-exam-table span {
+    color: var(--muted);
+}
+
+.obra-recap {
+    display: grid;
+    grid-template-columns: .65fr 1.35fr;
+    gap: 28px;
+    margin-top: 24px;
+    padding: 32px;
+    border-radius: 20px;
+    color: #fff4e3;
+    background: linear-gradient(130deg, var(--wine), #2b1018);
+    box-shadow: var(--shadow);
+}
+
+.obra-recap .eye {
+    color: #ecc77c;
+}
+
+.obra-recap h2 {
+    color: white;
+}
+
+.obra-recap ol {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.obra-recap li {
+    margin: 9px 0;
+    color: #eadbd0;
+}
+
+.obra-curiosities {
+    margin-top: 24px;
+}
+
+.obra-home-covers .book>div {
+    overflow: hidden;
+    margin: 24px 46px 92px;
+    background: #d8c7a4;
+}
+
+.obra-home-covers .book>div::after {
+    content: '';
+}
+
+.obra-home-covers .book img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px 13px 13px 3px;
+}
+
+.obra-home-covers .person h3 {
+    font-size: 1.35rem;
+}
+
+@media(max-width:1000px) {
+    .obra-page .obra-hero-grid {
+        grid-template-columns: 1fr 270px;
+        gap: 40px;
+    }
+
+    .obra-insight-grid,
+    .obra-character-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:760px) {
+    .obra-page .nav,
+    .dom-casmurro-page .nav {
+        width: min(1180px, calc(100% - 28px));
+        gap: 10px;
+    }
+
+    .obra-page nav#menu,
+    .dom-casmurro-page nav#menu {
+        display: none;
+    }
+
+    .obra-page .actions,
+    .dom-casmurro-page .actions {
+        margin-left: auto;
+    }
+
+    .obra-page #search,
+    .dom-casmurro-page #search {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .obra-page #search .wrap,
+    .dom-casmurro-page #search .wrap {
+        width: calc(100% - 28px);
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .obra-page #search input,
+    .dom-casmurro-page #search input {
+        min-width: 0;
+    }
+
+    .obra-page .obra-hero {
+        min-height: auto;
+        padding: 116px 0 58px;
+    }
+
+    .obra-page .obra-hero-grid,
+    .obra-context-grid,
+    .obra-analysis,
+    .obra-study-grid,
+    .obra-recap {
+        grid-template-columns: 1fr;
+    }
+
+    .obra-cover-figure {
+        width: min(100%, 300px);
+        margin: 10px auto 0;
+    }
+
+    .obra-insight-grid,
+    .obra-character-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .obra-insight {
+        min-height: auto;
+    }
+}
+
+@media(max-width:520px) {
+    .obra-page .obra-hero h1 {
+        font-size: 3.25rem;
+    }
+
+    .obra-page .obra-facts {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .obra-page .obra-facts span {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .obra-story::before {
+        left: 20px;
+    }
+
+    .obra-story-step {
+        grid-template-columns: 42px 1fr;
+        gap: 14px;
+    }
+
+    .obra-marker span {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .obra-context-card {
+        padding: 72px 24px 24px;
+    }
+
+    .obra-context-icon {
+        top: 24px;
+        left: 24px;
+    }
+
+    .obra-exam-table div {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .obra-recap,
+    .obra-analysis-callout {
+        padding: 25px;
+    }
+}
+
 .dom-casmurro-page .dc-hero {
     min-height: 690px;
     padding: 132px 0 72px;
@@ -44,6 +617,7 @@
     max-width: none;
     margin: 10px 0 18px;
     font-size: clamp(4rem, 8.3vw, 7rem);
+    overflow-wrap: anywhere;
 }
 
 .dom-casmurro-page .dc-lead {
@@ -861,7 +1435,15 @@
 
 @media(max-width:520px) {
     .dom-casmurro-page .dc-hero h1 {
-        font-size: 3.65rem;
+        font-size: clamp(2.65rem, 15vw, 3.35rem);
+        line-height: .98;
+    }
+
+    .dom-casmurro-page .dc-lead {
+        max-width: 31ch;
+        font-size: .98rem;
+        line-height: 1.65;
+        overflow-wrap: break-word;
     }
 
     .dom-casmurro-page .dc-hero-facts {
