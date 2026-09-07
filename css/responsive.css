@@ -1,0 +1,125 @@
+@media(max-width:1000px) {
+    [data-menu] {
+        display: grid !important
+    }
+
+    nav {
+        position: fixed;
+        inset: 76px 0 0;
+        padding: 35px;
+        flex-direction: column;
+        background: var(--paper);
+        transform: translateX(100%);
+        transition: .3s
+    }
+
+    nav.open {
+        transform: none
+    }
+
+    .periods {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .carousel {
+        grid-auto-columns: calc((100% - 36px)/3)
+    }
+
+    .layout {
+        grid-template-columns: 1fr
+    }
+
+    .layout aside {
+        position: static
+    }
+}
+
+@media(max-width:760px) {
+    .block {
+        padding: 65px 0
+    }
+
+    .heading {
+        align-items: start;
+        flex-direction: column
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .periods {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .carousel {
+        grid-auto-columns: calc((100% - 18px)/2)
+    }
+
+    .study,
+    .profile,
+    .sim {
+        grid-template-columns: 1fr
+    }
+
+    .flashes {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .result {
+        position: static
+    }
+
+    .foot {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:520px) {
+    .wrap {
+        width: calc(100% - 28px)
+    }
+
+    .hero {
+        min-height: 640px
+    }
+
+    .hero h1 {
+        font-size: 3.2rem
+    }
+
+    .buttons {
+        flex-direction: column
+    }
+
+    .periods,
+    .flashes,
+    .foot {
+        grid-template-columns: 1fr
+    }
+
+    .carousel {
+        grid-auto-columns: 84%
+    }
+
+    .stats div {
+        padding: 18px
+    }
+
+    .mind {
+        grid-template-columns: 1fr
+    }
+
+    .mind b {
+        grid-column: auto
+    }
+
+    .profile {
+        grid-template-columns: 1fr
+    }
+
+    .portrait,
+    .cover {
+        min-height: 320px
+    }
+}

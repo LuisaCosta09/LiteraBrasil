@@ -1,0 +1,1071 @@
+/* =========================================================
+   PÁGINA DO AUTOR — MACHADO DE ASSIS
+   Este arquivo estiliza SOMENTE autores/machado.html.
+   Cabeçalho e rodapé continuam usando style.css.
+   ========================================================= */
+
+.machado-page {
+    overflow: hidden;
+}
+
+/* ========================= HERO ========================= */
+.machado-page .machado-hero {
+    min-height: 560px;
+    padding: 145px 0 72px;
+    position: relative;
+    display: grid;
+    align-items: end;
+    color: #fff5e5;
+    background:
+        radial-gradient(circle at 78% 28%, #c29a5435 0 2px, transparent 3px),
+        radial-gradient(circle at 84% 46%, #c29a5428 0 2px, transparent 3px),
+        linear-gradient(115deg, #21090fef 0%, #4c1226e8 52%, #6a2035d9 100%);
+}
+
+.machado-page .machado-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: .15;
+    background-image:
+        linear-gradient(#fff 1px, transparent 1px),
+        linear-gradient(90deg, #fff 1px, transparent 1px);
+    background-size: 58px 58px;
+    mask-image: linear-gradient(to left, #000, transparent 70%);
+    pointer-events: none;
+}
+
+.machado-page .machado-hero::after {
+    content: attr(data-years);
+    position: absolute;
+    right: max(20px, calc((100vw - 1180px) / 2));
+    top: 135px;
+    color: #e9cb8b;
+    font: 700 clamp(1.8rem, 5vw, 4.2rem)/1 'Cormorant Garamond', serif;
+    letter-spacing: .08em;
+    opacity: .22;
+    pointer-events: none;
+}
+
+.machado-page .machado-hero .wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.machado-page .author-breadcrumb {
+    margin: 0 0 22px;
+    color: #dbcabb;
+    font-size: .82rem;
+}
+
+.machado-page .author-breadcrumb a:hover {
+    color: #fff;
+}
+
+.machado-page .hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(300px, .72fr);
+    gap: clamp(32px, 6vw, 90px);
+    align-items: end;
+}
+
+.machado-page .hero-copy {
+    min-width: 0;
+}
+
+.machado-page .machado-hero h1 {
+    max-width: 760px;
+    margin: 12px 0 14px;
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: .88;
+    letter-spacing: -.055em;
+}
+
+.machado-page .machado-hero .hero-lead {
+    max-width: 660px;
+    margin: 0;
+    color: #eadbc9;
+    font-size: 1.03rem;
+}
+
+/* Foto sem fundo ocupando o espaço ao lado do nome */
+.machado-page .hero-portrait {
+    position: relative;
+    min-height: 390px;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    isolation: isolate;
+}
+
+.machado-page .hero-portrait::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: 25px;
+    width: min(330px, 90%);
+    aspect-ratio: 1;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, #e7c77f22 0 46%, #e7c77f0d 47% 60%, transparent 61%);
+    border: 1px solid #efd08d1f;
+}
+
+.machado-page .hero-portrait::after {
+    content: attr(data-initials);
+    position: absolute;
+    z-index: -2;
+    right: -8px;
+    bottom: -18px;
+    color: #f4d99f0d;
+    font: 700 11rem/.8 'Cormorant Garamond', serif;
+    pointer-events: none;
+}
+
+/*
+   IMAGEM DO MACHADO — PNG SEM FUNDO
+   Caminho pronto no HTML:
+   ../img/autores/machado-de-assis.png
+
+   Basta colocar o arquivo PNG nessa pasta com esse nome.
+*/
+.machado-page .hero-author-photo {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: min(390px, 100%);
+    height: 430px;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: drop-shadow(0 22px 22px #15070b55) contrast(1.03);
+    transform: translateY(18px) scale(1.04);
+    transform-origin: center bottom;
+}
+
+
+/* Só aparece se a imagem ainda não estiver na pasta */
+.machado-page .hero-photo-fallback {
+    position: relative;
+    z-index: 1;
+    display: none;
+    place-items: center;
+    align-self: center;
+    width: min(330px, 100%);
+    min-height: 250px;
+    padding: 28px;
+    text-align: center;
+    color: #efd79f;
+    border: 1px dashed #efd08d55;
+    border-radius: 22px;
+    background: #ffffff08;
+}
+
+.machado-page .hero-photo-fallback strong {
+    display: block;
+    margin-bottom: 10px;
+    font: 700 1.45rem/1.05 'Cormorant Garamond', serif;
+}
+
+.machado-page .hero-photo-fallback span {
+    color: #dccab9;
+    font-size: .72rem;
+    line-height: 1.55;
+}
+
+/* ========================= CONTEÚDO ========================= */
+.machado-page .author-content {
+    padding: 74px 0 92px;
+}
+
+/*
+   BLOCO "QUEM FOI?"
+   Mantém a composição original:
+   foto vertical à esquerda + conteúdo à direita + citação abaixo.
+*/
+.machado-page .author-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(250px, 340px) minmax(0, 1fr);
+    gap: 34px;
+    align-items: stretch;
+}
+
+.machado-page .author-visual {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #6e2038, #241214 72%);
+    box-shadow: var(--shadow);
+}
+
+.machado-page .author-visual::before {
+    content: none;
+}
+
+.machado-page .author-visual::after {
+    content: '';
+    position: absolute;
+    inset: auto -70px -80px auto;
+    width: 220px;
+    aspect-ratio: 1;
+    border: 1px solid #e8c27355;
+    border-radius: 50%;
+}
+
+/*
+   FOTO DO AUTOR DESTA SEÇÃO
+   Basta colocar o PNG em:
+   img/autores/machado-de-assis.png
+*/
+.machado-page .author-photo {
+    position: absolute;
+    inset: -150px 10px 78px;
+    z-index: 1;
+    border-radius: 20px 20px 20px 20px;
+    width: calc(100% - 20px);
+    height: calc(100% - 94px);
+    object-fit: contain;
+    object-position: center bottom;
+    filter: drop-shadow(0 14px 14px #16090d66);
+}
+
+.machado-page .author-photo-fallback {
+    position: absolute;
+    inset: 0;
+    display: none;
+    place-items: center;
+    padding: 28px;
+    text-align: center;
+    color: #f1d9a7;
+    background: linear-gradient(145deg, #7b2942 0%, #35171c 70%), var(--wine);
+}
+
+.machado-page .author-photo-fallback strong {
+    display: block;
+    margin-bottom: 8px;
+    font: 700 3rem/1 'Cormorant Garamond', serif;
+}
+
+.machado-page .author-photo-fallback span {
+    display: block;
+    max-width: 230px;
+    color: #e7d5bd;
+    font-size: .82rem;
+}
+
+.machado-page .author-visual-caption {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 2;
+    padding: 90px 24px 24px;
+    color: #fff6e8;
+    background: linear-gradient(transparent, #180a0cef);
+}
+
+.machado-page .author-visual-caption small {
+    display: block;
+    color: #e7c77f;
+    text-transform: uppercase;
+    letter-spacing: .13em;
+    font-weight: 700;
+}
+
+.machado-page .author-visual-caption b {
+    display: block;
+    margin-top: 5px;
+    font: 700 1.55rem/1.08 'Cormorant Garamond', serif;
+}
+
+.machado-page .author-summary {
+    display: grid;
+    gap: 18px;
+}
+
+.machado-page .summary-card,
+.machado-page .author-section,
+.machado-page .work-card {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: var(--shadow);
+}
+
+.machado-page .summary-card {
+    padding: clamp(26px, 4vw, 42px);
+    border-radius: 28px;
+}
+
+.machado-page .summary-card h2,
+.machado-page .author-section h2 {
+    margin: 4px 0 15px;
+    font-size: clamp(2.25rem, 4vw, 3.4rem);
+}
+
+.machado-page .summary-card > p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.machado-page .quick-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 27px;
+}
+
+.machado-page .quick-facts div {
+    min-height: 104px;
+    padding: 17px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--bg);
+}
+
+.machado-page .quick-facts small {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--wine);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: .66rem;
+    font-weight: 800;
+}
+
+.machado-page .quick-facts b {
+    font-size: .9rem;
+    line-height: 1.35;
+}
+
+.machado-page .author-quote {
+    position: relative;
+    overflow: hidden;
+    padding: 34px 36px;
+    border-radius: 24px;
+    color: #fff2df;
+    background: linear-gradient(135deg, #6f1e36, #2c1217);
+    box-shadow: var(--shadow);
+}
+
+.machado-page .author-quote::after {
+    content: '“';
+    position: absolute;
+    right: 18px;
+    top: -35px;
+    color: #e7c06f22;
+    font: 700 12rem/1 'Cormorant Garamond', serif;
+}
+
+.machado-page .author-quote p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font: 600 clamp(1.55rem, 3vw, 2.25rem)/1.2 'Cormorant Garamond', serif;
+}
+
+.machado-page .author-quote small {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-top: 10px;
+    color: #e6c889;
+}
+
+.machado-page .author-section {
+    margin-top: 26px;
+    padding: clamp(28px, 4vw, 44px);
+    border-radius: 28px;
+}
+
+.machado-page .section-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: end;
+    margin-bottom: 26px;
+}
+
+.machado-page .section-heading p {
+    max-width: 500px;
+    margin: 0 0 8px;
+    color: var(--muted);
+}
+
+/* ========================= CRONOLOGIA INTERATIVA ========================= */
+.machado-page .timeline-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.machado-page .timeline-section::before {
+    content: 'TEMPO';
+    position: absolute;
+    right: -18px;
+    top: 30px;
+    color: var(--pale);
+    font: 700 clamp(4rem, 9vw, 8rem)/1 'Cormorant Garamond', serif;
+    letter-spacing: .04em;
+    opacity: .55;
+    pointer-events: none;
+}
+
+.machado-page .machado-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.machado-page .machado-timeline::before {
+    content: '';
+    position: absolute;
+    left: 4%;
+    right: 4%;
+    top: 34px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--wine), var(--gold));
+    opacity: .3;
+    pointer-events: none;
+}
+
+.machado-page .timeline-card {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 19px;
+    background: var(--bg);
+    transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+}
+
+.machado-page .timeline-card:hover {
+    transform: translateY(-5px);
+    border-color: #b78a3c75;
+    box-shadow: 0 16px 32px #24111512;
+}
+
+.machado-page .timeline-card[open] {
+    transform: translateY(-5px);
+    border-color: #9f6c267a;
+    background: linear-gradient(180deg, var(--bg), var(--paper));
+}
+
+.machado-page .timeline-card summary {
+    position: relative;
+    display: grid;
+    gap: 6px;
+    min-height: 150px;
+    padding: 58px 20px 20px;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+}
+
+.machado-page .timeline-card summary::-webkit-details-marker,
+.machado-page .trait summary::-webkit-details-marker {
+    display: none;
+}
+
+.machado-page .timeline-card summary::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+    border: 5px solid var(--bg);
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold);
+    transition: transform .24s ease;
+}
+
+.machado-page .timeline-card:hover summary::before,
+.machado-page .timeline-card[open] summary::before {
+    transform: scale(1.22);
+}
+
+.machado-page .timeline-year {
+    color: var(--wine);
+    font: 700 1.7rem/1 'Cormorant Garamond', serif;
+}
+
+.machado-page .timeline-title {
+    color: var(--text);
+    font-size: .78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
+
+.machado-page .timeline-plus {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--wine);
+    background: var(--paper);
+    font-size: 1rem;
+    transition: transform .25s ease, background .25s ease, color .25s ease;
+}
+
+.machado-page .timeline-card[open] .timeline-plus {
+    transform: rotate(45deg);
+    color: #fff;
+    background: var(--wine);
+}
+
+.machado-page .timeline-reveal {
+    padding: 0 20px 20px;
+    animation: machadoReveal .25s ease;
+}
+
+.machado-page .timeline-reveal p {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: .84rem;
+}
+
+.machado-page .timeline-reveal small {
+    display: inline-block;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+    color: var(--wine);
+    font-size: .68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
+
+.machado-page .interaction-hint {
+    margin: 15px 0 0;
+    color: var(--muted);
+    font-size: .73rem;
+}
+
+/* ========================= ESTILO INTERATIVO ========================= */
+.machado-page .style-section {
+    background:
+        radial-gradient(circle at 90% 10%, #a56d2b12, transparent 24%),
+        var(--paper);
+}
+
+.machado-page .characteristics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.machado-page .trait {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--bg);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.machado-page .trait::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: linear-gradient(var(--wine), var(--gold));
+    opacity: .2;
+    transition: opacity .2s ease, width .2s ease;
+}
+
+.machado-page .trait:hover {
+    transform: translateY(-6px);
+    border-color: #b78a3c70;
+    box-shadow: 0 18px 38px #25111712;
+}
+
+.machado-page .trait:hover::before,
+.machado-page .trait[open]::before {
+    width: 5px;
+    opacity: 1;
+}
+
+.machado-page .trait[open] {
+    grid-column: span 2;
+    border-color: #9e692d66;
+}
+
+.machado-page .trait summary {
+    position: relative;
+    min-height: 245px;
+    padding: 22px;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+}
+
+.machado-page .trait-number {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: white;
+    background: var(--wine);
+    font: 700 .78rem Inter, sans-serif;
+}
+
+.machado-page .trait-symbol {
+    position: absolute;
+    right: 18px;
+    top: 11px;
+    color: var(--pale);
+    font: 700 4.8rem/1 'Cormorant Garamond', serif;
+    transition: transform .25s ease, color .25s ease;
+}
+
+.machado-page .trait:hover .trait-symbol,
+.machado-page .trait[open] .trait-symbol {
+    transform: rotate(-8deg) scale(1.08);
+    color: #b78a3c38;
+}
+
+.machado-page .trait h3 {
+    margin: 29px 0 8px;
+    font-size: 1.55rem;
+}
+
+.machado-page .trait summary > p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .84rem;
+}
+
+.machado-page .trait-action {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    color: var(--wine);
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    font-size: .66rem;
+    font-weight: 800;
+}
+
+.machado-page .trait-action b {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--wine);
+    transition: transform .25s ease;
+}
+
+.machado-page .trait[open] .trait-action b {
+    transform: rotate(45deg);
+}
+
+.machado-page .trait-reveal {
+    margin: 0 22px 22px;
+    padding: 16px;
+    border-radius: 15px;
+    background: var(--paper);
+    animation: machadoReveal .25s ease;
+}
+
+.machado-page .trait-reveal > b {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--wine);
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+}
+
+.machado-page .trait-reveal p {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: .84rem;
+}
+
+.machado-page .trait-reveal small {
+    display: inline-flex;
+    padding: 6px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: .66rem;
+    font-weight: 700;
+}
+
+@keyframes machadoReveal {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================= OBRAS COM CAPAS ========================= */
+.machado-page .works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.machado-page .work-card {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 22px;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.machado-page .work-card:hover {
+    transform: translateY(-6px);
+    border-color: #b78a3c75;
+    box-shadow: 0 20px 42px #2e161a16;
+}
+
+/* Área da capa: sem altura fixa para nunca recortar a imagem. */
+.machado-page .work-cover {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 18px;
+    background: linear-gradient(145deg, #f2e8da, #e8dbc8);
+}
+
+/* A capa respeita a proporção original do arquivo e aparece inteira. */
+.machado-page .work-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+    object-position: center center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px #2e161a20;
+    transition: filter .35s ease;
+}
+
+/* No hover não ampliamos a imagem, para não esconder nenhuma parte da capa. */
+.machado-page .work-card:hover .work-cover img {
+    transform: none;
+    filter: contrast(1.03);
+}
+
+.machado-page .work-cover-fallback {
+    position: absolute;
+    inset: 0;
+    display: none;
+    place-items: center;
+    align-content: center;
+    gap: 12px;
+    padding: 28px;
+    text-align: center;
+    color: #f5ead9;
+    background:
+        linear-gradient(135deg, transparent 0 48%, #e7c57718 49% 51%, transparent 52%),
+        linear-gradient(145deg, #73243c, #2b1518 78%);
+}
+
+.machado-page .work-cover-fallback::before,
+.machado-page .work-cover-fallback::after {
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border: 1px solid #e6c27725;
+    border-radius: 50%;
+}
+
+.machado-page .work-cover-fallback::before {
+    left: -70px;
+    top: -60px;
+}
+
+.machado-page .work-cover-fallback::after {
+    right: -70px;
+    bottom: -60px;
+}
+
+.machado-page .work-cover-fallback span,
+.machado-page .work-cover-fallback b,
+.machado-page .work-cover-fallback small {
+    position: relative;
+    z-index: 1;
+}
+
+.machado-page .work-cover-fallback span {
+    color: #e7c77f;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: .62rem;
+    font-weight: 800;
+}
+
+.machado-page .work-cover-fallback b {
+    max-width: 220px;
+    font: 700 1.7rem/1.05 'Cormorant Garamond', serif;
+}
+
+.machado-page .work-cover-fallback small {
+    color: #d9c8b9;
+    font-size: .67rem;
+    line-height: 1.45;
+}
+
+.machado-page .work-number {
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #fff5e544;
+    border-radius: 50%;
+    color: #fff7e9;
+    background: #241013a8;
+    backdrop-filter: blur(5px);
+    font: 700 .78rem Inter, sans-serif;
+}
+
+.machado-page .work-info {
+    padding: 24px;
+}
+
+.machado-page .work-info > small {
+    color: var(--wine);
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    font-size: .67rem;
+    font-weight: 800;
+}
+
+.machado-page .work-info h3 {
+    margin: 10px 0 10px;
+    font-size: 1.72rem;
+    line-height: 1.05;
+}
+
+.machado-page .work-info p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .84rem;
+}
+
+/* ========================= CURIOSIDADE ========================= */
+.machado-page .curiosity {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-top: 26px;
+    padding: 28px 30px;
+    border-radius: 24px;
+    color: #fff2df;
+    background: linear-gradient(120deg, #281215, #5f1d31);
+    box-shadow: var(--shadow);
+}
+
+.machado-page .curiosity-mark {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #e7c06f55;
+    border-radius: 50%;
+    color: #e7c06f;
+    font: 700 2.4rem 'Cormorant Garamond', serif;
+}
+
+.machado-page .curiosity h3 {
+    margin: 0 0 4px;
+    color: #f9e8cf;
+    font-size: 1.7rem;
+}
+
+.machado-page .curiosity p {
+    margin: 0;
+    color: #dbc7b7;
+    font-size: .9rem;
+}
+
+/* ========================= RESPONSIVO ========================= */
+@media (max-width: 980px) {
+    .machado-page .hero-layout {
+        grid-template-columns: minmax(0, 1fr) 310px;
+        gap: 30px;
+    }
+
+    .machado-page .author-intro-grid {
+        grid-template-columns: 280px minmax(0, 1fr);
+    }
+
+    .machado-page .quick-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .machado-page .machado-timeline,
+    .machado-page .characteristics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .machado-page .machado-timeline::before {
+        display: none;
+    }
+
+    .machado-page .trait[open] {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 760px) {
+    .machado-page .machado-hero {
+        min-height: auto;
+        padding: 128px 0 58px;
+    }
+
+    .machado-page .machado-hero::after {
+        top: 112px;
+        right: 20px;
+    }
+
+    .machado-page .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .machado-page .machado-hero h1 {
+        font-size: clamp(3.7rem, 17vw, 5.2rem);
+    }
+
+    .machado-page .hero-portrait {
+        min-height: 350px;
+        max-width: 560px;
+        margin-inline: auto;
+    }
+
+    .machado-page .hero-author-photo {
+        height: 370px;
+        transform: translateY(12px) scale(1.02);
+    }
+
+    .machado-page .author-content {
+        padding: 50px 0 70px;
+    }
+
+    .machado-page .author-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .machado-page .author-visual {
+        min-height: 480px;
+    }
+
+    .machado-page .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .machado-page .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .machado-page .work-card {
+        display: grid;
+        grid-template-columns: minmax(180px, .75fr) 1fr;
+    }
+
+    .machado-page .work-cover {
+        height: auto;
+        min-height: 0;
+        padding: 14px;
+        align-self: start;
+    }
+
+    .machado-page .work-info {
+        align-self: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .machado-page .quick-facts,
+    .machado-page .characteristics-grid,
+    .machado-page .machado-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .machado-page .summary-card,
+    .machado-page .author-section {
+        border-radius: 22px;
+    }
+
+    .machado-page .author-visual {
+        min-height: 420px;
+        border-radius: 22px;
+    }
+
+    .machado-page .timeline-card summary {
+        min-height: 130px;
+    }
+
+    .machado-page .trait summary {
+        min-height: 220px;
+    }
+
+    .machado-page .work-card {
+        display: block;
+    }
+
+    .machado-page .work-cover {
+        height: auto;
+        min-height: 0;
+        padding: 14px 16px;
+    }
+
+    .machado-page .curiosity {
+        grid-template-columns: 1fr;
+    }
+
+    .machado-page .curiosity-mark {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .machado-page .hero-portrait {
+        min-height: 300px;
+    }
+
+    .machado-page .hero-author-photo {
+        width: min(320px, 94vw);
+        height: 330px;
+        transform: translateY(10px);
+    }
+
+    .machado-page .hero-portrait::after {
+        font-size: 7rem;
+        right: 0;
+    }
+}

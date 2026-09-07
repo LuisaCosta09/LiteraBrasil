@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Início | LiteraBrasil</title>
+    <meta name="description" content="Início: Literatura Brasileira para ENEM e vestibulares">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script defer src="js/darkmode.js"></script>
+    <script defer src="js/search.js"></script>
+    <script defer src="js/carousel.js"></script>
+    <script defer src="js/quiz.js"></script>
+    <script defer src="js/flashcards.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav"><a class="logo" href="index.html"><b>LB</b> LiteraBrasil</a>
+            <nav id="menu"><a href="index.html">Início</a><a href="index.html#linha">Linha do Tempo</a><a
+                    href="index.html#periodos">Períodos</a><a href="index.html#autores">Autores</a><a
+                    href="index.html#obras">Obras</a><a href="simulados.html">Simulados</a><a
+                    href="sobre.html">Sobre</a></nav>
+            <div class="actions"><button data-search>⌕</button><button data-theme>☾</button><button data-menu>☰</button>
+            </div>
+        </div>
+    </header>
+    <aside id="search">
+        <div class="wrap"><input placeholder="Pesquisar autores, obras ou períodos…"><button data-search>×</button>
+            <div id="results"></div>
+        </div>
+    </aside>
+    <main>
+        <section class="hero">
+            <div class="wrap"><span class="eye">Literatura · história </span>
+                <h1>Descubra a evolução da Literatura Brasileira</h1>
+                <p>Explore cada período literário, conheça seus autores, compreenda o contexto histórico e prepare-se
+                    para o ENEM e vestibulares.</p>
+                <div class="buttons"><a class="btn" href="#linha">Explorar Linha do Tempo →</a><a class="btn ghost"
+                        href="simulados.html">Fazer Simulados</a></div>
+            </div>
+        </section>
+        <!-- <section class="stats wrap">
+            <div><b>12</b>períodos</div>
+            <div><b>40+</b>autores</div>
+            <div><b>70+</b>obras</div>
+            <div><b>60+</b>questões</div>
+        </section> -->
+        <section class="block wrap" id="linha">
+            <div class="heading">
+                <div><span class="eye">Do século XVI à atualidade</span>
+                    <h2>Uma viagem pela literatura</h2>
+                </div>
+                <p>Veja como cada movimento dialoga com seu tempo e transforma a escrita do Brasil.</p>
+            </div>
+            <div class="periods" id="periodos"><a class="pc reveal" href="periodos/quinhentismo.html"><em>01</em>
+                    <h3>Quinhentismo</h3>
+                    <p>1500–1601</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/barroco.html"><em>02</em>
+                    <h3>Barroco</h3>
+                    <p>1601–1768</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/arcadismo.html"><em>03</em>
+                    <h3>Arcadismo</h3>
+                    <p>1768–1836</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/romantismo.html"><em>04</em>
+                    <h3>Romantismo</h3>
+                    <p>1836–1881</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/realismo.html"><em>05</em>
+                    <h3>Realismo</h3>
+                    <p>1881–1893</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/naturalismo.html"><em>06</em>
+                    <h3>Naturalismo</h3>
+                    <p>1881–1902</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/parnasianismo.html"><em>07</em>
+                    <h3>Parnasianismo</h3>
+                    <p>1882–1922</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/simbolismo.html"><em>08</em>
+                    <h3>Simbolismo</h3>
+                    <p>1893–1910</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/premodernismo.html"><em>09</em>
+                    <h3>Pré-Modernismo</h3>
+                    <p>1902–1922</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/modernismo.html"><em>10</em>
+                    <h3>Modernismo</h3>
+                    <p>1922–1945</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/posmodernismo.html"><em>11</em>
+                    <h3>Pós-Modernismo</h3>
+                    <p>1945–1980</p><span>Estudar período →</span>
+                </a><a class="pc reveal" href="periodos/contemporanea.html"><em>12</em>
+                    <h3>Literatura Contemporânea</h3>
+                    <p>1980–hoje</p><span>Estudar período →</span>
+                </a></div>
+        </section>
+        <section class="block pale" id="autores">
+            <div class="wrap">
+                <div class="heading">
+                    <div><span class="eye">Vozes fundamentais</span>
+                        <h2>Autores em destaque</h2>
+                    </div>
+                    <div><button data-prev="#aut">←</button><button data-next="#aut">→</button></div>
+                </div>
+                <div class="carousel" id="aut"><a class="person" href="autores/machado.html">
+                        <div data-i="MA"></div>
+                        <section><small>Realismo</small>
+                            <h3>Machado de Assis</h3>
+                        </section>
+                    </a><a class="person" href="autores/alencar.html">
+                        <div data-i="JA"></div>
+                        <section><small>Romantismo</small>
+                            <h3>José de Alencar</h3>
+                        </section>
+                    </a><a class="person" href="autores/clarice.html">
+                        <div data-i="CL"></div>
+                        <section><small>Pós-Modernismo</small>
+                            <h3>Clarice Lispector</h3>
+                        </section>
+                    </a><a class="person" href="autores/drummond.html">
+                        <div data-i="CD"></div>
+                        <section><small>Modernismo</small>
+                            <h3>Carlos Drummond de Andrade</h3>
+                        </section>
+                    </a><a class="person" href="autores/graciliano.html">
+                        <div data-i="GR"></div>
+                        <section><small>Modernismo</small>
+                            <h3>Graciliano Ramos</h3>
+                        </section>
+                    </a><a class="person" href="autores/cecilia.html">
+                        <div data-i="CM"></div>
+                        <section><small>Modernismo</small>
+                            <h3>Cecília Meireles</h3>
+                        </section>
+                    </a><a class="person" href="autores/guimaraes.html">
+                        <div data-i="JR"></div>
+                        <section><small>Pós-Modernismo</small>
+                            <h3>Guimarães Rosa</h3>
+                        </section>
+                    </a></div>
+            </div>
+        </section>
+        <section class="block wrap" id="obras">
+            <div class="heading">
+                <div><span class="eye">Leituras essenciais</span>
+                    <h2>Obras em destaque</h2>
+                </div>
+                <div><button data-prev="#boo">←</button><button data-next="#boo">→</button></div>
+            </div>
+            <div class="carousel" id="boo"><a class="person book" href="obras/dom-casmurro.html">
+                    <div></div>
+                    <section><small>1899 · Realismo</small>
+                        <h3>Dom Casmurro</h3>
+                    </section>
+                </a><a class="person book" href="obras/iracema.html">
+                    <div></div>
+                    <section><small>1865 · Romantismo</small>
+                        <h3>Iracema</h3>
+                    </section>
+                </a><a class="person book" href="obras/memorias-postumas.html">
+                    <div></div>
+                    <section><small>1881 · Realismo</small>
+                        <h3>Memórias Póstumas de Brás Cubas</h3>
+                    </section>
+                </a><a class="person book" href="obras/vidas-secas.html">
+                    <div></div>
+                    <section><small>1938 · Modernismo</small>
+                        <h3>Vidas Secas</h3>
+                    </section>
+                </a><a class="person book" href="obras/grande-sertao.html">
+                    <div></div>
+                    <section><small>1956 · Pós-Modernismo</small>
+                        <h3>Grande Sertão: Veredas</h3>
+                    </section>
+                </a><a class="person book" href="obras/capitaes-da-areia.html">
+                    <div></div>
+                    <section><small>1937 · Modernismo</small>
+                        <h3>Capitães da Areia</h3>
+                    </section>
+                </a><a class="person book" href="obras/cortico.html">
+                    <div></div>
+                    <section><small>1890 · Naturalismo</small>
+                        <h3>O Cortiço</h3>
+                    </section>
+                </a><a class="person book" href="obras/os-sertoes.html">
+                    <div></div>
+                    <section><small>1902 · Pré-Modernismo</small>
+                        <h3>Os Sertões</h3>
+                    </section>
+                </a></div>
+        </section>
+        <section class="block pale">
+            <div class="wrap study">
+                <article class="card quiz"><span class="eye">Quiz rápido</span>
+                    <h2>Machado de Assis é o principal representante brasileiro de qual escola?</h2>
+                    <button>Romantismo</button><button
+                        data-ok>Realismo</button><button>Simbolismo</button><button>Modernismo</button>
+                    <p data-feedback></p>
+                </article>
+                <aside class="quote"><b>“</b>
+                    <p data-quote>A vida é curta, mas as emoções que podemos deixar duram uma eternidade.</p><small
+                        data-author>— Clarice Lispector</small>
+                </aside>
+            </div>
+        </section>
+        <section class="block wrap" id="flash">
+            <div class="heading">
+                <div><span class="eye">Revisão ativa</span>
+                    <h2>Flashcards</h2>
+                </div>
+                <p>Clique para revelar a resposta.</p>
+            </div>
+            <div class="flashes">
+                <article class="flash">
+                    <div><small>Pergunta</small>
+                        <h3>Qual obra inicia o Realismo?</h3>
+                    </div>
+                    <div><small>Resposta</small>
+                        <h3>Memórias Póstumas de Brás Cubas, em 1881.</h3>
+                    </div>
+                </article>
+                <article class="flash">
+                    <div><small>Pergunta</small>
+                        <h3>O que é fugere urbem?</h3>
+                    </div>
+                    <div><small>Resposta</small>
+                        <h3>O ideal árcade de fugir da cidade.</h3>
+                    </div>
+                </article>
+                <article class="flash">
+                    <div><small>Pergunta</small>
+                        <h3>Qual evento marca o Modernismo?</h3>
+                    </div>
+                    <div><small>Resposta</small>
+                        <h3>A Semana de Arte Moderna de 1922.</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap foot">
+            <div>
+                <h3>LiteraBrasil</h3>
+                <p>Literatura brasileira explicada de forma clara e visual.</p>
+            </div>
+            <div>
+                <h3>Objetivo</h3>
+                <p>Apoiar estudantes do Ensino Médio, ENEM e vestibulares.</p>
+            </div>
+            <div>
+                <h3>Referências</h3>
+                <p><a href="sobre.html#ref">Bibliografia e contato</a></p>
+            </div>
+        </div><small>© 2026 LiteraBrasil · Projeto educativo</small>
+    </footer>
+
+    <footer>
+
+</body>
+
+</html>

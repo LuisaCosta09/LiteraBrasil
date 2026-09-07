@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-next],[data-prev]').forEach(b=>b.onclick=()=>{let e=document.querySelector(b.dataset.next||b.dataset.prev);e.scrollBy({left:e.clientWidth*(b.dataset.next?.length?1:-1),behavior:'smooth'})})});
