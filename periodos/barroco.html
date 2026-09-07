@@ -8,15 +8,18 @@
     <meta name="description" content="Barroco: Literatura Brasileira para ENEM e vestibulares">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="barroco.css">
     <script defer src="../js/darkmode.js"></script>
     <script defer src="../js/search.js"></script>
     <script defer src="../js/carousel.js"></script>
     <script defer src="../js/quiz.js"></script>
     <script defer src="../js/flashcards.js"></script>
     <script defer src="../js/script.js"></script>
+    <script defer src="barroco.js"></script>
 </head>
 
-<body>
+<body class="barroco-page">
+    <!-- CABEÇALHO ORIGINAL MANTIDO -->
     <header>
         <div class="wrap nav"><a class="logo" href="../index.html"><b>LB</b> LiteraBrasil</a>
             <nav id="menu"><a href="../index.html">Início</a><a href="../index.html#linha">Linha do Tempo</a><a
@@ -27,82 +30,423 @@
             </div>
         </div>
     </header>
+
     <aside id="search">
         <div class="wrap"><input placeholder="Pesquisar autores, obras ou períodos…"><button data-search>×</button>
             <div id="results"></div>
         </div>
     </aside>
+
     <main>
-        <section class="detail">
-            <div class="wrap">
-                <p><a href="../index.html">Início</a> / Períodos</p><span class="eye">1601–1768</span>
-                <h1>Barroco</h1>
-                <p>Movimento marcado por dualismo, cultismo, conceptismo, antíteses e paradoxos.</p>
+        <!-- HERO DO BARROCO -->
+        <section class="detail arc-hero">
+            <div class="wrap arc-hero-inner">
+                <div class="arc-hero-copy">
+                    <p class="arc-breadcrumb"><a href="../index.html">Início</a> / Períodos / Barroco</p>
+                    <span class="eye">1601–1768</span>
+                    <h1>Barroco</h1>
+                    <p class="arc-subtitle">Dualismo, contraste e conflito entre fé e desejo.</p>
+                    <p class="arc-intro">Um movimento que expressa a tensão entre o sagrado e o profano, a razão e a
+                        paixão, através de uma linguagem rebuscada, cheia de antíteses e paradoxos.</p>
+                </div>
+
+                <!-- IMAGEM PESQUISADA 01
+                     Salve em: ../img/periodos/barroco/hero.jpg
+                     Sugestão: pintura de igreja colonial barroca / talha dourada / atmosfera de contraste luz-sombra. -->
+                <div class="arc-image-slot arc-hero-art" data-arc-image="../img/periodos/barroco/hero.jpg"
+                    data-placeholder="IMAGEM DO TOPO: igreja barroca / talha dourada / claro-escuro"></div>
+
+                <blockquote class="arc-hero-quote">
+                    <strong>“Triste Bahia! Ó quão dessemelhante<br>Estás e estou do nosso antigo estado!”</strong>
+                    <span>— Gregório de Matos</span>
+                </blockquote>
             </div>
         </section>
-        <section class="block wrap layout">
-            <div class="stack">
-                <article class="card">
+
+        <section class="block wrap arc-page-content">
+            <!-- SOMENTE ESTE BLOCO FICA EM 3 COLUNAS NO DESKTOP -->
+            <section class="arc-intro-grid reveal" aria-label="Introdução ao Barroco">
+                <article class="arc-panel" data-number="01">
+                    <span class="arc-panel-kicker">Panorama</span>
+                    <h2>O que foi?</h2>
+                    <p>O Barroco foi um movimento literário e artístico que se desenvolveu entre os séculos XVII e
+                        XVIII, marcado pelo conflito entre valores opostos: fé e razão, corpo e alma, céu e terra.
+                        Sua linguagem é rebuscada, cheia de figuras de estilo, contrastes e exageros, refletindo a
+                        instabilidade emocional e espiritual da época.</p>
+                    <div class="arc-panel-tags"><span>Dualismo</span><span>Contrarreforma</span></div>
+                </article>
+
+                <article class="arc-panel" data-number="02">
+                    <span class="arc-panel-kicker">Brasil colonial</span>
                     <h2>Contexto histórico</h2>
-                    <p>O Barroco desenvolveu-se em um cenário de conflito entre fé e desejo na sociedade colonial. As
-                        mudanças políticas, sociais e culturais do período influenciaram diretamente seus temas e sua
-                        linguagem.</p>
+                    <p>No Brasil, o Barroco desenvolveu-se em meio à sociedade açucareira e à forte presença da
+                        Igreja Católica, em um cenário de conflito entre fé e desejo na sociedade colonial. A
+                        Contrarreforma católica e a catequese influenciaram diretamente os temas e a retórica
+                        religiosa do período.</p>
+                    <div class="arc-panel-tags"><span>Sociedade açucareira</span><span>Igreja Católica</span></div>
                 </article>
-                <article class="card">
-                    <h2>Características e influências</h2>
-                    <div class="tags"><span>dualismo</span><span>cultismo</span><span>conceptismo</span><span>antíteses
-                            e paradoxos</span><span>história brasileira</span><span>tradição europeia</span></div>
+
+                <article class="arc-panel" data-number="03">
+                    <span class="arc-panel-kicker">Matrizes estéticas</span>
+                    <h2>Influências</h2>
+                    <p>O movimento recebeu forte influência do <b>gongorismo</b> (cultismo, de Góngora) e do
+                        <b>conceptismo</b> (de Quevedo), correntes espanholas marcadas pelo jogo de palavras e de
+                        ideias. A <b>Contrarreforma</b> católica também moldou a produção literária, reforçando temas
+                        de culpa, pecado e salvação.</p>
+                    <div class="arc-panel-tags"><span>Gongorismo</span><span>Conceptismo</span></div>
                 </article>
-                <article class="card">
-                    <h2>Importância</h2>
-                    <p>O movimento contribuiu para ampliar as formas de representar o Brasil e permanece essencial para
-                        compreender o desenvolvimento de nossa literatura.</p>
-                    <h3>Curiosidade</h3>
-                    <p>Suas datas são convenções didáticas: movimentos literários convivem e se influenciam.</p>
-                </article>
-                <article class="card">
-                    <h2>Linha do tempo interna</h2>
-                    <ol class="timeline">
-                        <li><b>1601</b> — marco inicial</li>
-                        <li><b>Consolidação</b> — autores e obras centrais</li>
-                        <li><b>1768</b> — diálogo com o movimento seguinte</li>
-                    </ol>
-                </article>
-                <article class="card">
-                    <h2>Mapa mental e resumo</h2>
-                    <div class="mind">
-                        <b>Barroco</b><span>dualismo</span><span>cultismo</span><span>conceptismo</span><span>antíteses
-                            e paradoxos</span></div>
-                    <p><strong>Para revisar:</strong> associe Barroco a conflito entre fé e desejo na sociedade
-                        colonial, aos autores Gregório de Matos, Padre Antônio Vieira e às obras Prosopopeia, Sermões.
-                    </p>
-                </article>
-                <article class="card">
-                    <h2>Comparação</h2>
-                    <table>
-                        <tr>
-                            <th>Quinhentismo</th>
-                            <th>Barroco</th>
-                            <th>Arcadismo</th>
-                        </tr>
-                        <tr>
-                            <td>descrição da terra, visão eurocêntrica e caráter documental</td>
-                            <td>dualismo, cultismo, conceptismo, antíteses e paradoxos</td>
-                            <td>bucolismo, fugere urbem, carpe diem e equilíbrio formal</td>
-                        </tr>
-                    </table>
-                </article>
+            </section>
+
+            <div class="arc-stack">
+                <section class="arc-section reveal" id="caracteristicas">
+                    <div class="arc-section-heading">
+                        <div><span class="arc-kicker">Essência do movimento</span><h2>Principais características</h2></div>
+                    </div>
+                    <p class="arc-section-lead">Passe o mouse sobre cada cartão para ver uma pintura que represente visualmente a característica.</p>
+
+                    <div class="arc-feature-grid">
+                        <article class="arc-feature arc-flip" tabindex="0" role="button" aria-label="Dualismo: virar cartão">
+                            <div class="arc-feature-inner">
+                                <div class="arc-feature-face arc-feature-front"><span class="arc-feature-number">01</span><h3>Dualismo</h3><p>Conflito entre corpo e alma, terra e céu, pecado e virtude.</p><small>Ver pintura</small></div>
+                                <div class="arc-feature-face arc-feature-back arc-image-slot" data-arc-image="../img/periodos/barroco/dualismo.jpg" data-placeholder="PINTURA: contraste sagrado e profano"><div class="arc-image-caption">Dualismo</div></div>
+                            </div>
+                        </article>
+                        <article class="arc-feature arc-flip" tabindex="0" role="button" aria-label="Cultismo: virar cartão">
+                            <div class="arc-feature-inner">
+                                <div class="arc-feature-face arc-feature-front"><span class="arc-feature-number">02</span><h3>Cultismo</h3><p>Jogo de palavras, metáforas rebuscadas e construções sintáticas complexas.</p><small>Ver pintura</small></div>
+                                <div class="arc-feature-face arc-feature-back arc-image-slot" data-arc-image="../img/periodos/barroco/cultismo.jpg" data-placeholder="PINTURA: ornamentação / talha dourada"><div class="arc-image-caption">Cultismo</div></div>
+                            </div>
+                        </article>
+                        <article class="arc-feature arc-flip" tabindex="0" role="button" aria-label="Conceptismo: virar cartão">
+                            <div class="arc-feature-inner">
+                                <div class="arc-feature-face arc-feature-front"><span class="arc-feature-number">03</span><h3>Conceptismo</h3><p>Jogo de ideias, argumentação lógica e raciocínio persuasivo.</p><small>Ver pintura</small></div>
+                                <div class="arc-feature-face arc-feature-back arc-image-slot" data-arc-image="../img/periodos/barroco/conceptismo.jpg" data-placeholder="PINTURA: orador sacro / púlpito"><div class="arc-image-caption">Conceptismo</div></div>
+                            </div>
+                        </article>
+                        <article class="arc-feature arc-flip" tabindex="0" role="button" aria-label="Antíteses e paradoxos: virar cartão">
+                            <div class="arc-feature-inner">
+                                <div class="arc-feature-face arc-feature-front"><span class="arc-feature-number">04</span><h3>Antíteses e paradoxos</h3><p>Contraposição de ideias e imagens opostas em um mesmo verso.</p><small>Ver pintura</small></div>
+                                <div class="arc-feature-face arc-feature-back arc-image-slot" data-arc-image="../img/periodos/barroco/antiteses.jpg" data-placeholder="PINTURA: luz e sombra / claro-escuro"><div class="arc-image-caption">Antíteses e paradoxos</div></div>
+                            </div>
+                        </article>
+                        <article class="arc-feature arc-flip" tabindex="0" role="button" aria-label="Fugacidade da vida: virar cartão">
+                            <div class="arc-feature-inner">
+                                <div class="arc-feature-face arc-feature-front"><span class="arc-feature-number">05</span><h3>Fugacidade da vida</h3><p>Consciência da passagem do tempo e da inevitabilidade da morte.</p><small>Ver pintura</small></div>
+                                <div class="arc-feature-face arc-feature-back arc-image-slot" data-arc-image="../img/periodos/barroco/fugacidade.jpg" data-placeholder="PINTURA: vanitas / natureza-morta / ampulheta"><div class="arc-image-caption">Fugacidade da vida</div></div>
+                            </div>
+                        </article>
+                        <article class="arc-feature arc-flip" tabindex="0" role="button" aria-label="Pecado e culpa: virar cartão">
+                            <div class="arc-feature-inner">
+                                <div class="arc-feature-face arc-feature-front"><span class="arc-feature-number">06</span><h3>Pecado e culpa</h3><p>Tensão moral e religiosa constante diante da salvação da alma.</p><small>Ver pintura</small></div>
+                                <div class="arc-feature-face arc-feature-back arc-image-slot" data-arc-image="../img/periodos/barroco/pecado-culpa.jpg" data-placeholder="PINTURA: cena religiosa / penitência"><div class="arc-image-caption">Pecado e culpa</div></div>
+                            </div>
+                        </article>
+                        <article class="arc-feature arc-flip" tabindex="0" role="button" aria-label="Fusão sagrado e profano: virar cartão">
+                            <div class="arc-feature-inner">
+                                <div class="arc-feature-face arc-feature-front"><span class="arc-feature-number">07</span><h3>Fusão sagrado e profano</h3><p>O divino e o mundano se cruzam em um mesmo texto ou imagem.</p><small>Ver pintura</small></div>
+                                <div class="arc-feature-face arc-feature-back arc-image-slot" data-arc-image="../img/periodos/barroco/sagrado-profano.jpg" data-placeholder="PINTURA: santos e cenas mundanas lado a lado"><div class="arc-image-caption">Fusão sagrado e profano</div></div>
+                            </div>
+                        </article>
+                        <article class="arc-feature arc-flip" tabindex="0" role="button" aria-label="Hipérboles e exageros: virar cartão">
+                            <div class="arc-feature-inner">
+                                <div class="arc-feature-face arc-feature-front"><span class="arc-feature-number">08</span><h3>Hipérboles e exageros</h3><p>Linguagem ornamentada, intensa e cheia de recursos retóricos.</p><small>Ver pintura</small></div>
+                                <div class="arc-feature-face arc-feature-back arc-image-slot" data-arc-image="../img/periodos/barroco/hiperboles.jpg" data-placeholder="PINTURA: composição dramática / gestos exagerados"><div class="arc-image-caption">Hipérboles e exageros</div></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- PRINCIPAIS AUTORES -->
+                <section class="arc-section reveal" id="autores">
+                    <div class="arc-section-heading">
+                        <div><span class="arc-kicker">Nomes centrais</span><h2>Principais autores</h2></div>
+                    </div>
+
+                    <div class="arc-author-list">
+                        <article class="arc-author">
+                            <!-- IMAGEM PESQUISADA: ../img/periodos/barroco/bento-teixeira.jpg -->
+                            <div class="arc-image-slot arc-author-photo" data-arc-image="../img/periodos/barroco/bento-teixeira.jpg"
+                                data-placeholder="Foto / retrato de Bento Teixeira"></div>
+                            <div>
+                                <h3>Bento Teixeira</h3>
+                                <p><b>Obra de destaque:</b> <i>Prosopopeia</i> (1601), considerado o marco inicial do Barroco no Brasil e o primeiro poema épico produzido em terras brasileiras.</p>
+                                <p><b>Temas:</b> elogio a autoridades coloniais, mitologia clássica e paisagem da colônia.</p>
+                            </div>
+                        </article>
+
+                        <article class="arc-author">
+                            <!-- IMAGEM PESQUISADA: ../img/periodos/barroco/gregorio-de-matos.jpg -->
+                            <div class="arc-image-slot arc-author-photo" data-arc-image="../img/periodos/barroco/gregorio-de-matos.jpg"
+                                data-placeholder="Foto / retrato de Gregório de Matos"></div>
+                            <div>
+                                <h3>Gregório de Matos</h3>
+                                <p><b>Apelido:</b> “Boca do Inferno”.</p>
+                                <p><b>Obra:</b> poesia lírica, satírica e religiosa, reunida postumamente em coletâneas.</p>
+                                <p><b>Temas:</b> crítica social e política, amor, religiosidade e sátira aos costumes da Bahia colonial.</p>
+                            </div>
+                        </article>
+
+                        <article class="arc-author">
+                            <!-- IMAGEM PESQUISADA: ../img/periodos/barroco/padre-antonio-vieira.jpg -->
+                            <div class="arc-image-slot arc-author-photo" data-arc-image="../img/periodos/barroco/padre-antonio-vieira.jpg"
+                                data-placeholder="Foto / retrato do Padre Antônio Vieira"></div>
+                            <div>
+                                <h3>Padre Antônio Vieira</h3>
+                                <p><b>Obra:</b> <i>Sermões</i>, com destaque para o <i>Sermão da Sexagésima</i> e o <i>Sermão de Santo Antônio aos Peixes</i>.</p>
+                                <p><b>Temas:</b> fé, moral, retórica persuasiva e defesa dos povos indígenas contra a escravização.</p>
+                            </div>
+                        </article>
+
+                        <article class="arc-author">
+                            <!-- IMAGEM PESQUISADA: ../img/periodos/barroco/manuel-botelho.jpg -->
+                            <div class="arc-image-slot arc-author-photo" data-arc-image="../img/periodos/barroco/manuel-botelho.jpg"
+                                data-placeholder="Foto / retrato de Manuel Botelho de Oliveira"></div>
+                            <div>
+                                <h3>Manuel Botelho de Oliveira</h3>
+                                <p><b>Obra:</b> <i>Música do Parnaso</i> (1705).</p>
+                                <p><b>Destaque:</b> considerado o primeiro livro publicado por um autor nascido no Brasil, com poesia lírica e bucólica em várias línguas.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- PRINCIPAIS OBRAS — CARROSSEL HORIZONTAL
+                     IMPORTANTE:
+                     1) Troque o href="#" de cada capa pelo link do livro online.
+                     2) Salve as capas nos caminhos indicados em cada comentário abaixo.
+                     3) A imagem inteira funciona como link clicável. -->
+                <section class="arc-section reveal" id="obras">
+                    <div class="arc-section-heading arc-books-heading">
+                        <div>
+                            <span class="arc-kicker">Leituras essenciais</span>
+                            <h2>Principais obras</h2>
+                            <p class="arc-books-intro">Deslize para o lado ou use as setas. Clique na capa para abrir a obra online.</p>
+                        </div>
+                        <div class="arc-books-controls" aria-label="Controles do carrossel de obras">
+                            <button type="button" class="arc-books-arrow" data-arc-books-prev aria-label="Obra anterior">←</button>
+                            <button type="button" class="arc-books-arrow" data-arc-books-next aria-label="Próxima obra">→</button>
+                        </div>
+                    </div>
+
+                    <div class="arc-books-viewport">
+                        <div class="arc-books-track" data-arc-books-track tabindex="0" aria-label="Carrossel de principais obras do Barroco">
+                            <article class="arc-book-card">
+                                <!-- LINK DO LIVRO: substitua href="#" pelo endereço de Prosopopeia online. -->
+                                <a class="arc-book-cover-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Abrir Prosopopeia online">
+                                    <!-- CAPA: coloque em ../img/periodos/barroco/prosopopeia.jpg -->
+                                    <div class="arc-image-slot arc-book-cover" data-arc-image="../img/periodos/barroco/prosopopeia.jpg" data-placeholder="CAPA: Prosopopeia"></div>
+                                    <span class="arc-book-open">Abrir obra ↗</span>
+                                </a>
+                                <div class="arc-book-info">
+                                    <span>1601</span>
+                                    <h3>Prosopopeia</h3>
+                                    <p>Bento Teixeira</p>
+                                </div>
+                            </article>
+
+                            <article class="arc-book-card">
+                                <!-- LINK DO LIVRO: substitua href="#" pelo endereço da Obra Poética online. -->
+                                <a class="arc-book-cover-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Abrir Obra Poética online">
+                                    <!-- CAPA: coloque em ../img/periodos/barroco/obra-poetica.jpg -->
+                                    <div class="arc-image-slot arc-book-cover" data-arc-image="../img/periodos/barroco/obra-poetica.jpg" data-placeholder="CAPA: Obra Poética"></div>
+                                    <span class="arc-book-open">Abrir obra ↗</span>
+                                </a>
+                                <div class="arc-book-info">
+                                    <span>Séc. XVII</span>
+                                    <h3>Obra Poética</h3>
+                                    <p>Gregório de Matos</p>
+                                </div>
+                            </article>
+
+                            <article class="arc-book-card">
+                                <!-- LINK DO LIVRO: substitua href="#" pelo endereço do Sermão da Sexagésima online. -->
+                                <a class="arc-book-cover-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Abrir Sermão da Sexagésima online">
+                                    <!-- CAPA: coloque em ../img/periodos/barroco/sermao-sexagesima.jpg -->
+                                    <div class="arc-image-slot arc-book-cover" data-arc-image="../img/periodos/barroco/sermao-sexagesima.jpg" data-placeholder="CAPA: Sermão da Sexagésima"></div>
+                                    <span class="arc-book-open">Abrir obra ↗</span>
+                                </a>
+                                <div class="arc-book-info">
+                                    <span>1655</span>
+                                    <h3>Sermão da Sexagésima</h3>
+                                    <p>Padre Antônio Vieira</p>
+                                </div>
+                            </article>
+
+                            <article class="arc-book-card">
+                                <!-- LINK DO LIVRO: substitua href="#" pelo endereço do Sermão de Santo Antônio aos Peixes online. -->
+                                <a class="arc-book-cover-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Abrir Sermão de Santo Antônio aos Peixes online">
+                                    <!-- CAPA: coloque em ../img/periodos/barroco/sermao-santo-antonio.jpg -->
+                                    <div class="arc-image-slot arc-book-cover" data-arc-image="../img/periodos/barroco/sermao-santo-antonio.jpg" data-placeholder="CAPA: Sermão de Santo Antônio aos Peixes"></div>
+                                    <span class="arc-book-open">Abrir obra ↗</span>
+                                </a>
+                                <div class="arc-book-info">
+                                    <span>1654</span>
+                                    <h3>Sermão de Santo Antônio aos Peixes</h3>
+                                    <p>Padre Antônio Vieira</p>
+                                </div>
+                            </article>
+
+                            <article class="arc-book-card">
+                                <!-- LINK DO LIVRO: substitua href="#" pelo endereço do Sermão pelo Bom Sucesso das Armas de Portugal online. -->
+                                <a class="arc-book-cover-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Abrir Sermão pelo Bom Sucesso das Armas de Portugal online">
+                                    <!-- CAPA: coloque em ../img/periodos/barroco/sermao-bom-sucesso.jpg -->
+                                    <div class="arc-image-slot arc-book-cover" data-arc-image="../img/periodos/barroco/sermao-bom-sucesso.jpg" data-placeholder="CAPA: Sermão pelo Bom Sucesso das Armas de Portugal"></div>
+                                    <span class="arc-book-open">Abrir obra ↗</span>
+                                </a>
+                                <div class="arc-book-info">
+                                    <span>1640</span>
+                                    <h3>Sermão pelo Bom Sucesso das Armas de Portugal</h3>
+                                    <p>Padre Antônio Vieira</p>
+                                </div>
+                            </article>
+
+                            <article class="arc-book-card">
+                                <!-- LINK DO LIVRO: substitua href="#" pelo endereço de Música do Parnaso online. -->
+                                <a class="arc-book-cover-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Abrir Música do Parnaso online">
+                                    <!-- CAPA: coloque em ../img/periodos/barroco/musica-do-parnaso.jpg -->
+                                    <div class="arc-image-slot arc-book-cover" data-arc-image="../img/periodos/barroco/musica-do-parnaso.jpg" data-placeholder="CAPA: Música do Parnaso"></div>
+                                    <span class="arc-book-open">Abrir obra ↗</span>
+                                </a>
+                                <div class="arc-book-info">
+                                    <span>1705</span>
+                                    <h3>Música do Parnaso</h3>
+                                    <p>Manuel Botelho de Oliveira</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="arc-section arc-importance reveal" id="importancia">
+                    <div class="arc-section-heading">
+                        <div><span class="arc-kicker">Por que estudar?</span><h2>Importância</h2></div>
+                    </div>
+                    <div class="arc-importance-grid">
+                        <div class="arc-importance-copy">
+                            <p>O Barroco representa a primeira grande tensão estilística entre os modelos europeus e a
+                                experiência colonial brasileira. Ao adaptar o cultismo e o conceptismo à realidade da
+                                colônia, autores como Gregório de Matos e Padre Antônio Vieira consolidaram uma
+                                tradição de oratória sacra e de crítica social que ainda hoje é estudada por seus
+                                recursos de linguagem. O movimento também evidencia o papel central da Igreja na vida
+                                colonial e nas tensões entre fé, moral e poder.</p>
+                            <div class="arc-importance-note"><b>Por que isso importa?</b><span>É a base retórica e estilística que antecede o equilíbrio formal do Arcadismo, mostrando como a literatura colonial dialogava com conflitos religiosos e sociais da época.</span></div>
+                        </div>
+                        <!-- IMAGEM PESQUISADA
+                             Salve em: ../img/periodos/barroco/importancia.jpg
+                             Sugestão: interior de igreja barroca colonial, talha dourada, altar-mor ou manuscrito de sermão. -->
+                        <div class="arc-image-slot arc-importance-art" data-arc-image="../img/periodos/barroco/importancia.jpg" data-placeholder="IMAGEM: igreja colonial / oratória sacra"></div>
+                    </div>
+                </section>
+
+                <section class="arc-section reveal" id="curiosidades">
+                    <div class="arc-section-heading">
+                        <div><span class="arc-kicker">Para lembrar</span><h2>Curiosidades</h2></div>
+                    </div>
+                    <div class="arc-curiosities">
+                        <article>
+                            <!-- IMAGEM PESQUISADA: ../img/periodos/barroco/curiosidade-boca-inferno.jpg -->
+                            <div class="arc-image-slot arc-curiosity-art" data-arc-image="../img/periodos/barroco/curiosidade-boca-inferno.jpg" data-placeholder="IMAGEM: Bahia colonial / sátira"></div>
+                            <div class="arc-curiosity-copy"><span>1</span><h3>“Boca do Inferno”</h3><p>Gregório de Matos ficou conhecido por esse apelido devido às sátiras ferozes que fazia contra autoridades e costumes da Bahia colonial.</p></div>
+                        </article>
+                        <article>
+                            <!-- IMAGEM PESQUISADA: ../img/periodos/barroco/curiosidade-vieira.jpg -->
+                            <div class="arc-image-slot arc-curiosity-art" data-arc-image="../img/periodos/barroco/curiosidade-vieira.jpg" data-placeholder="IMAGEM: diplomacia colonial / defesa indígena"></div>
+                            <div class="arc-curiosity-copy"><span>2</span><h3>Diplomata e defensor</h3><p>Padre Antônio Vieira atuou como diplomata a serviço da Coroa portuguesa e defendeu abertamente os povos indígenas contra a escravização.</p></div>
+                        </article>
+                        <article>
+                            <!-- IMAGEM PESQUISADA: ../img/periodos/barroco/curiosidade-circulacao.jpg -->
+                            <div class="arc-image-slot arc-curiosity-art" data-arc-image="../img/periodos/barroco/curiosidade-circulacao.jpg" data-placeholder="IMAGEM: manuscrito / poesia satírica"></div>
+                            <div class="arc-curiosity-copy"><span>3</span><h3>Circulação proibida</h3><p>Muitos poemas satíricos de Gregório de Matos circulavam de forma <b>manuscrita e anônima</b>, por conta da censura e do risco de retaliação das autoridades.</p></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="arc-section reveal" id="linha-interna">
+                    <div class="arc-section-heading">
+                        <div><span class="arc-kicker">Evolução do período</span><h2>Linha do tempo interna</h2></div>
+                    </div>
+                    <p class="arc-section-lead">Passe o mouse sobre os pontos para abrir um detalhe de cada momento.</p>
+                    <div class="arc-timeline" role="list">
+                        <article role="listitem" tabindex="0">
+                            <div class="arc-time-pop"><b>Por que 1601?</b><span>É a data convencionalmente usada como início do Barroco brasileiro, associada à publicação de <i>Prosopopeia</i>.</span></div>
+                            <b>1601</b><span>Marco inicial</span><p>Publicação de <i>Prosopopeia</i>, de Bento Teixeira, primeiro poema épico produzido no Brasil.</p>
+                        </article>
+                        <article role="listitem" tabindex="0">
+                            <div class="arc-time-pop"><b>Auge do movimento</b><span>Gregório de Matos e Padre Antônio Vieira produzem suas obras mais conhecidas, consolidando cultismo e conceptismo.</span></div>
+                            <b>Meados do séc. XVII</b><span>Auge</span><p>Produção de Gregório de Matos e dos sermões de Padre Antônio Vieira.</p>
+                        </article>
+                        <article role="listitem" tabindex="0">
+                            <div class="arc-time-pop"><b>Consolidação</b><span>A oratória sacra e a poesia cultista/conceptista se fortalecem nas colônias, com destaque para a produção religiosa.</span></div>
+                            <b>Fim do séc. XVII</b><span>Consolidação</span><p>Fortalecimento da oratória sacra e da poesia cultista nas colônias portuguesas.</p>
+                        </article>
+                        <article role="listitem" tabindex="0">
+                            <div class="arc-time-pop"><b>Mudança de sensibilidade</b><span>Em 1768, <i>Obras Poéticas</i>, de Cláudio Manuel da Costa, marca convencionalmente o início do Arcadismo brasileiro.</span></div>
+                            <b>1768</b><span>Transição</span><p>O Arcadismo passa a ocupar o centro da literatura brasileira, buscando razão e equilíbrio.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="arc-section reveal" id="comparacao">
+                    <div class="arc-section-heading">
+                        <div><span class="arc-kicker">Antes e depois</span><h2>Comparação com outros períodos</h2></div>
+                    </div>
+                    <div class="arc-table-wrap">
+                        <table class="arc-table">
+                            <thead><tr><th>Aspecto</th><th>Quinhentismo</th><th>Barroco</th><th>Arcadismo</th></tr></thead>
+                            <tbody>
+                                <tr><th>Visão de mundo</th><td>Documental e eurocêntrica</td><td>Dualismo e conflito</td><td>Razão e equilíbrio</td></tr>
+                                <tr><th>Temas</th><td>Descrição da terra e riquezas naturais</td><td>Religião, pecado, morte, amor</td><td>Natureza, vida simples, amor idealizado</td></tr>
+                                <tr><th>Linguagem</th><td>Informativa e descritiva</td><td>Rebuscada, cultista e conceptista</td><td>Clara, regular e objetiva</td></tr>
+                                <tr><th>Influências</th><td>Relatos de viagem e crônicas</td><td>Contrarreforma, gongorismo e conceptismo</td><td>Iluminismo e Neoclassicismo</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="arc-section arc-summary reveal" id="resumo">
+                    <div class="arc-section-heading">
+                        <div><span class="arc-kicker">Para a prova</span><h2>Em resumo</h2></div>
+                    </div>
+                    <p>O Barroco brasileiro, iniciado convencionalmente em 1601 com a publicação de <i>Prosopopeia</i>,
+                        de Bento Teixeira, foi marcado pela influência da Contrarreforma, do gongorismo e do
+                        conceptismo, e pelo conflito entre fé e desejo na sociedade colonial. Entre suas marcas estão
+                        o <i>dualismo</i>, o <i>cultismo</i>, o <i>conceptismo</i> e as <i>antíteses e paradoxos</i>.
+                        Gregório de Matos, Padre Antônio Vieira, Bento Teixeira e Manuel Botelho de Oliveira estão
+                        entre seus principais nomes.</p>
+                    <div class="arc-review-line"><b>Associe:</b> Barroco → Contrarreforma → dualismo → cultismo/conceptismo → antítese → 1601–1768.</div>
+                </section>
+
+                <div class="arc-period-nav" role="navigation" aria-label="Navegação entre períodos">
+                    <a href="quinhentismo.html">← Quinhentismo</a>
+                    <span>Do relato colonial ao conflito entre fé e desejo.</span>
+                    <a href="arcadismo.html">Arcadismo →</a>
+                </div>
             </div>
-            <aside>
-                <article class="card">
-                    <h3>Ficha rápida</h3>
-                    <p><b>Data:</b> 1601–1768</p>
-                    <p><b>Autores:</b> Gregório de Matos, Padre Antônio Vieira</p>
-                    <p><b>Obras:</b> Prosopopeia, Sermões</p>
-                </article>
-            </aside>
         </section>
     </main>
+
+    <!-- BOTÃO FIXO + MODAL DA FICHA RÁPIDA -->
+    <button class="arc-ficha-button" type="button" data-arc-open-ficha aria-controls="arc-ficha-modal" aria-expanded="false">
+        <span>Ficha rápida</span><small>consulta</small>
+    </button>
+
+    <div class="arc-modal" id="arc-ficha-modal" aria-hidden="true">
+        <div class="arc-modal-backdrop" data-arc-close-ficha></div>
+        <section class="arc-modal-card" role="dialog" aria-modal="true" aria-labelledby="arc-ficha-title">
+            <button class="arc-modal-close" type="button" data-arc-close-ficha aria-label="Fechar ficha rápida">×</button>
+            <span class="arc-kicker">Consulta rápida</span>
+            <h2 id="arc-ficha-title">Ficha rápida</h2>
+            <dl class="arc-facts">
+                <div><dt>Período</dt><dd>1601–1768</dd></div>
+                <div><dt>Marco inicial</dt><dd><i>Prosopopeia</i>, de Bento Teixeira</dd></div>
+                <div><dt>Autores</dt><dd>Bento Teixeira, Gregório de Matos, Padre Antônio Vieira e Manuel Botelho de Oliveira</dd></div>
+                <div><dt>Obras</dt><dd><i>Prosopopeia</i>, <i>Sermões</i> e <i>Música do Parnaso</i></dd></div>
+                <div><dt>Palavras-chave</dt><dd>Dualismo, cultismo, conceptismo, antíteses e paradoxos, Contrarreforma</dd></div>
+            </dl>
+        </section>
+    </div>
+
+    <!-- RODAPÉ ORIGINAL MANTIDO -->
     <footer>
         <div class="wrap foot">
             <div>
